@@ -56,7 +56,53 @@
           </div>
         </aside>
 
+        <!-- Tablet Icon Sidebar -->
+        <aside class="hidden md:flex lg:hidden w-[72px] bg-foreground py-5 flex-col items-center">
+          <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
+            <iconify-icon icon="lucide:book-open" class="text-xl text-tertiary"></iconify-icon>
+          </div>
+          <nav class="mt-9 space-y-4">
+            <a class="w-11 h-11 rounded-lg bg-secondary border-l-[3px] border-primary flex items-center justify-center" href="dashboard.html">
+              <iconify-icon icon="lucide:layout-dashboard" class="text-xl text-primary"></iconify-icon>
+            </a>
+            <a class="w-11 h-11 rounded-lg flex items-center justify-center text-muted-foreground" href="events.html">
+              <iconify-icon icon="lucide:search" class="text-xl"></iconify-icon>
+            </a>
+            <a class="w-11 h-11 rounded-lg flex items-center justify-center text-muted-foreground" href="my-events.html">
+              <iconify-icon icon="lucide:calendar" class="text-xl"></iconify-icon>
+            </a>
+            <a class="w-11 h-11 rounded-lg flex items-center justify-center text-muted-foreground" href="certificates.html">
+              <iconify-icon icon="lucide:award" class="text-xl"></iconify-icon>
+            </a>
+          </nav>
+          <a href="../shared/profile.html" class="mt-auto">
+            <img data-user-avatar src="" alt="Student profile portrait" class="w-9 h-9 rounded-full object-cover border border-tertiary" />
+          </a>
+        </aside>
+
         <main class="flex-1 min-w-0">
+          <!-- Mobile Header -->
+          <header class="md:hidden h-16 bg-card border-b border-border px-5 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div class="w-9 h-9 rounded-lg bg-accent flex items-center justify-center">
+                <iconify-icon icon="lucide:book-open" class="text-xl text-tertiary"></iconify-icon>
+              </div>
+              <div>
+                <p class="font-heading text-lg leading-none">Obsidian Ledger</p>
+                <p class="text-[8px] uppercase tracking-[0.15em] text-muted-foreground mt-1">College Events</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <a href="events.html" class="min-h-11 min-w-11 flex items-center justify-center">
+                <iconify-icon icon="lucide:search" class="text-xl"></iconify-icon>
+              </a>
+              <a href="../shared/profile.html">
+                <img data-user-avatar src="" alt="Student profile portrait" class="w-9 h-9 object-cover rounded-full border border-border" />
+              </a>
+            </div>
+          </header>
+
+          <!-- Tablet & Desktop Header -->
           <header class="hidden md:flex h-16 bg-card border-b border-border px-7 lg:px-8 items-center justify-between">
             <div class="w-[300px] lg:w-[380px] min-h-10 bg-background rounded-lg px-3 flex items-center gap-2 text-muted-foreground">
               <iconify-icon icon="lucide:search" class="text-lg"></iconify-icon>
@@ -77,6 +123,7 @@
               </a>
             </div>
           </header>
+
           <div class="px-5 py-6 md:p-7 lg:p-8 max-w-[900px] lg:max-w-[860px] mx-auto">
             <!-- Greeting -->
             <section class="lg:py-5 flex justify-between items-end">
@@ -168,6 +215,45 @@
               <div id="next-event-body"></div>
             </section>
 
+            <!-- Tablet Calendar + Quick Actions -->
+            <section class="hidden md:grid xl:hidden grid-cols-2 gap-6 mt-6">
+              <div class="bg-card border border-border rounded-xl p-5">
+                <div class="flex justify-between items-center">
+                  <h2 data-calendar-label class="font-heading text-xl"></h2>
+                  <iconify-icon icon="lucide:calendar-days" class="text-tertiary"></iconify-icon>
+                </div>
+                <div data-calendar-grid class="grid grid-cols-7 gap-y-3 text-center text-xs text-muted-foreground mt-5"></div>
+                <div class="bg-muted rounded-lg p-3 mt-5">
+                  <p class="text-sm font-semibold">No events today</p>
+                  <p class="text-xs text-muted-foreground mt-1">Explore what is waiting next.</p>
+                </div>
+              </div>
+              <div class="bg-card border border-border rounded-xl p-5">
+                <h2 class="font-heading text-xl">Quick Actions</h2>
+                <div class="mt-3 space-y-1">
+                  <a href="events.html" class="min-h-12 flex items-center gap-3 border-b border-border">
+                    <iconify-icon icon="lucide:search" class="text-tertiary"></iconify-icon>
+                    <span class="flex-1 text-sm">Discover Events</span>
+                    <iconify-icon icon="lucide:chevron-right" class="text-muted-foreground"></iconify-icon>
+                  </a>
+                  <a href="my-events.html" class="min-h-12 flex items-center gap-3 border-b border-border">
+                    <iconify-icon icon="lucide:calendar" class="text-tertiary"></iconify-icon>
+                    <span class="flex-1 text-sm">My Registrations</span>
+                    <iconify-icon icon="lucide:chevron-right" class="text-muted-foreground"></iconify-icon>
+                  </a>
+                  <a href="attendance-history.html" class="min-h-12 flex items-center gap-3 border-b border-border">
+                    <iconify-icon icon="lucide:activity" class="text-tertiary"></iconify-icon>
+                    <span class="flex-1 text-sm">Attendance History</span>
+                    <iconify-icon icon="lucide:chevron-right" class="text-muted-foreground"></iconify-icon>
+                  </a>
+                  <a href="certificates.html" class="min-h-12 flex items-center gap-3">
+                    <iconify-icon icon="lucide:download" class="text-tertiary"></iconify-icon>
+                    <span class="flex-1 text-sm">Download Certificates</span>
+                    <iconify-icon icon="lucide:chevron-right" class="text-muted-foreground"></iconify-icon>
+                  </a>
+                </div>
+              </div>
+            </section>
 
             <!-- Recommended for You -->
             <section id="discover" class="mt-7">
@@ -181,6 +267,18 @@
               <div id="recommended-grid" class="flex gap-4 overflow-x-auto pb-3 md:grid md:grid-cols-2 lg:grid-cols-4 md:overflow-visible md:pb-0"></div>
             </section>
 
+            <!-- Mobile Today Status Card -->
+            <section class="md:hidden bg-card border border-border rounded-xl p-5 mt-5">
+              <div class="flex gap-3">
+                <div class="w-10 h-10 bg-muted rounded-lg flex items-center justify-center">
+                  <iconify-icon icon="lucide:sun" class="text-primary text-xl"></iconify-icon>
+                </div>
+                <div>
+                  <h2 class="font-heading text-xl">No events today</h2>
+                  <p class="text-xs leading-relaxed text-muted-foreground mt-1">Take a moment to explore upcoming events.</p>
+                </div>
+              </div>
+            </section>
           </div>
         </main>
 
@@ -236,6 +334,34 @@
           </section>
         </aside>
       </div>
+
+      <!-- Mobile Bottom Navigation -->
+      <nav class="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-card border-t border-border px-3 flex justify-between items-center z-10">
+        <a href="dashboard.html" class="min-h-11 min-w-11 rounded-lg bg-accent flex flex-col items-center justify-center text-tertiary">
+          <iconify-icon icon="lucide:house" class="text-lg"></iconify-icon>
+          <span class="text-[9px] font-semibold">Home</span>
+        </a>
+        <a href="events.html" class="min-h-11 min-w-11 flex flex-col items-center justify-center text-muted-foreground">
+          <iconify-icon icon="lucide:search" class="text-lg"></iconify-icon>
+          <span class="text-[9px]">Discover</span>
+        </a>
+        <a href="my-events.html" class="min-h-11 min-w-11 flex flex-col items-center justify-center text-muted-foreground">
+          <iconify-icon icon="lucide:calendar" class="text-lg"></iconify-icon>
+          <span class="text-[9px]">Events</span>
+        </a>
+        <a href="certificates.html" class="min-h-11 min-w-11 flex flex-col items-center justify-center text-muted-foreground">
+          <iconify-icon icon="lucide:award" class="text-lg"></iconify-icon>
+          <span class="text-[9px]">Awards</span>
+        </a>
+        <a href="../shared/profile.html" class="min-h-11 min-w-11 flex flex-col items-center justify-center text-muted-foreground">
+          <iconify-icon icon="lucide:user" class="text-lg"></iconify-icon>
+          <span class="text-[9px]">Profile</span>
+        </a>
+      </nav>
     </div>
+
+    <script src="../../js/config.js"></script>
+    <script src="../../js/app.js"></script>
+    <script src="../../js/student/dashboard.js"></script>
   </body>
 </html>
