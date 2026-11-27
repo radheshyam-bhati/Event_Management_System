@@ -1,0 +1,14 @@
+{
+  "summary": {
+    "attended": 12,
+    "attendedMeta": "Great progress!",
+    "noShows": "02",
+    "rate": "86%"
+  },
+  "rows": [
+    { "event": "Founders’ Lecture Series", "date": "12 APR 2025", "category": "Academic", "status": "ATTENDED" },
+    { "event": "Spring Theatre Revue", "date": "04 APR 2025", "category": "Cultural", "status": "ATTENDED" },
+    { "event": "Intercollegiate Football", "date": "21 MAR 2025", "category": "Sports", "status": "NO-SHOW" },
+    { "event": "Research Poster Salon", "date": "14 MAR 2025", "category": "Academic", "status": "CANCELLED" }
+  ]
+}

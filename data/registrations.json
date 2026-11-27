@@ -1,0 +1,22 @@
+{
+  "summary": {
+    "registeredTotal": 5,
+    "registeredMeta": "↑ 2 this month",
+    "upcomingTotal": 3,
+    "upcomingMeta": "Next in 2 days",
+    "upcomingTab": "03",
+    "waitlistedTab": "01",
+    "pastTab": "12"
+  },
+  "items": [
+    {
+      "eventId": "evt-001",
+      "badge": "REGISTERED · SEMINAR",
+      "title": "The Power of Youth Voices",
+      "meta": "Fri, 25 Apr · Main Auditorium",
+      "countdown": "02d : 14h : 32m",
+      "imageUrl": "https://uxmagic.blob.core.windows.net/public/agent-images/lecture-hall-1790052322471-i51r4qmub9.png",
+      "imageAlt": "University lecture hall"
+    }
+  ]
+}
