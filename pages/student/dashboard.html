@@ -183,6 +183,58 @@
 
           </div>
         </main>
+
+        <!-- Desktop Right Rail -->
+        <aside class="hidden xl:block w-[320px] bg-card border-l border-border p-6">
+          <section>
+            <div class="flex items-center justify-between">
+              <h2 data-calendar-label class="font-heading text-xl"></h2>
+              <div class="flex gap-1">
+                <button id="calendar-prev" type="button" class="min-h-11 min-w-11"><iconify-icon icon="lucide:chevron-left"></iconify-icon></button>
+                <button id="calendar-next" type="button" class="min-h-11 min-w-11"><iconify-icon icon="lucide:chevron-right"></iconify-icon></button>
+              </div>
+            </div>
+            <div data-calendar-grid class="grid grid-cols-7 text-center text-[10px] text-muted-foreground mt-4 gap-y-3"></div>
+          </section>
+
+          <section class="bg-muted rounded-xl p-4 mt-7">
+            <div class="flex gap-3">
+              <div class="w-9 h-9 rounded-lg bg-card flex items-center justify-center">
+                <iconify-icon icon="lucide:sun" class="text-primary"></iconify-icon>
+              </div>
+              <div>
+                <p class="text-sm font-semibold">No events today</p>
+                <p class="text-xs text-muted-foreground mt-1">Take a moment to explore upcoming events.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="mt-7">
+            <h2 class="font-heading text-xl mb-3">Quick Actions</h2>
+            <div class="border border-border rounded-xl overflow-hidden">
+              <a class="min-h-14 px-4 flex items-center gap-3 border-b border-border" href="events.html">
+                <iconify-icon icon="lucide:search" class="text-tertiary"></iconify-icon>
+                <span class="flex-1"><b class="text-sm block">Discover Events</b><small class="text-xs text-muted-foreground">Explore upcoming events</small></span>
+                <iconify-icon icon="lucide:chevron-right" class="text-muted-foreground"></iconify-icon>
+              </a>
+              <a class="min-h-14 px-4 flex items-center gap-3 border-b border-border" href="my-events.html">
+                <iconify-icon icon="lucide:calendar" class="text-tertiary"></iconify-icon>
+                <span class="flex-1"><b class="text-sm block">My Registrations</b><small class="text-xs text-muted-foreground">View and manage your events</small></span>
+                <iconify-icon icon="lucide:chevron-right" class="text-muted-foreground"></iconify-icon>
+              </a>
+              <a class="min-h-14 px-4 flex items-center gap-3 border-b border-border" href="attendance-history.html">
+                <iconify-icon icon="lucide:activity" class="text-tertiary"></iconify-icon>
+                <span class="flex-1"><b class="text-sm block">Attendance History</b><small class="text-xs text-muted-foreground">Check your past events</small></span>
+                <iconify-icon icon="lucide:chevron-right" class="text-muted-foreground"></iconify-icon>
+              </a>
+              <a class="min-h-14 px-4 flex items-center gap-3" href="certificates.html">
+                <iconify-icon icon="lucide:download" class="text-tertiary"></iconify-icon>
+                <span class="flex-1"><b class="text-sm block">Download Certificates</b><small class="text-xs text-muted-foreground">Access achievements</small></span>
+                <iconify-icon icon="lucide:chevron-right" class="text-muted-foreground"></iconify-icon>
+              </a>
+            </div>
+          </section>
+        </aside>
       </div>
     </div>
   </body>
