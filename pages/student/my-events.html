@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Registrations — Obsidian Ledger</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+    <style type="text/tailwindcss" src="../../css/main.css"></style>
+    <link rel="stylesheet" href="../../css/main.css" />
+  </head>
+  <body>
+    <div class="min-h-screen w-full bg-background flex flex-col relative text-foreground">
+      <header class="h-16 bg-card border-b border-border px-5 lg:px-8 flex items-center justify-between">
+        <a href="dashboard.html" class="font-heading text-xl">Obsidian Ledger</a>
+        <div class="flex gap-5 items-center">
+          <a href="events.html" class="text-sm">Discover Events</a>
+          <a href="../shared/notifications.html" class="min-w-11 min-h-11 flex items-center justify-center">
+            <iconify-icon icon="lucide:bell" class="text-xl"></iconify-icon>
+          </a>
+        </div>
+      </header>
+
+      <main class="max-w-5xl mx-auto p-5 lg:p-8 w-full">
+        <p class="text-xs uppercase tracking-[0.18em] text-tertiary font-semibold">Student record</p>
+        <h1 class="font-heading text-4xl mt-2">My Registrations</h1>
+
+        <div class="flex gap-1 bg-muted p-1 rounded-lg mt-7 w-fit">
+          <button data-tab="upcoming" type="button" class="min-h-11 px-5 bg-card rounded-lg font-semibold text-sm">
+            Upcoming <span id="tab-upcoming-count" class="font-mono text-xs"></span>
+          </button>
+          <button data-tab="waitlisted" type="button" class="min-h-11 px-5 rounded-lg text-sm">
+            Waitlisted <span id="tab-waitlisted-count" class="font-mono text-xs"></span>
+          </button>
+          <button data-tab="past" type="button" class="min-h-11 px-5 rounded-lg text-sm">
+            Past <span id="tab-past-count" class="font-mono text-xs"></span>
+          </button>
+        </div>
+
+      </main>
+    </div>
+  </body>
+</html>
