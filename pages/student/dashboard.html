@@ -77,7 +77,89 @@
               </a>
             </div>
           </header>
-          <div id="dashboard-main-content" class="px-5 py-6 md:p-7 lg:p-8 max-w-[900px] lg:max-w-[860px] mx-auto"></div>
+          <div class="px-5 py-6 md:p-7 lg:p-8 max-w-[900px] lg:max-w-[860px] mx-auto">
+            <!-- Greeting -->
+            <section class="lg:py-5 flex justify-between items-end">
+              <div>
+                <p id="greeting-term" class="text-[10px] md:text-xs uppercase tracking-[0.18em] text-tertiary font-semibold"></p>
+                <h1 id="greeting-headline" class="font-heading text-3xl md:text-4xl leading-tight mt-2 text-balance"></h1>
+                <p class="mt-3 text-sm leading-relaxed text-muted-foreground text-pretty">Discover. Participate. Learn. Grow. Make your college journey memorable.</p>
+              </div>
+              <p class="hidden md:block font-heading italic text-tertiary text-right max-w-[180px]">Great things happen beyond the classroom.</p>
+            </section>
+
+            <!-- KPI Cards -->
+            <section class="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mt-6 md:mt-7 lg:mt-5">
+              <div class="bg-card border border-border rounded-xl p-4 md:p-5 lg:p-4">
+                <div class="w-9 h-9 bg-muted rounded-lg hidden lg:flex items-center justify-center">
+                  <iconify-icon icon="lucide:calendar" class="text-lg text-tertiary"></iconify-icon>
+                </div>
+                <div class="flex items-start justify-between lg:block">
+                  <div>
+                    <p data-stat="registeredCount" class="font-mono text-3xl lg:mt-4"></p>
+                    <p class="text-xs md:text-sm lg:text-[13px] text-muted-foreground mt-2 md:mt-1 lg:mt-0">Registered Events</p>
+                  </div>
+                  <div class="w-10 h-10 hidden md:flex lg:hidden bg-muted rounded-lg items-center justify-center">
+                    <iconify-icon icon="lucide:calendar" class="text-lg text-tertiary"></iconify-icon>
+                  </div>
+                  <iconify-icon icon="lucide:calendar" class="md:hidden text-xl text-tertiary"></iconify-icon>
+                </div>
+                <p data-stat="registeredMeta" class="text-[11px] md:text-xs text-tertiary mt-3 md:mt-5 lg:mt-3"></p>
+              </div>
+
+              <div class="bg-card border border-border rounded-xl p-4 md:p-5 lg:p-4">
+                <div class="w-9 h-9 bg-muted rounded-lg hidden lg:flex items-center justify-center">
+                  <iconify-icon icon="lucide:clock" class="text-lg text-tertiary"></iconify-icon>
+                </div>
+                <div class="flex items-start justify-between lg:block">
+                  <div>
+                    <p data-stat="upcomingCount" class="font-mono text-3xl lg:mt-4"></p>
+                    <p class="text-xs md:text-sm lg:text-[13px] text-muted-foreground mt-2 md:mt-1 lg:mt-0">Upcoming Events</p>
+                  </div>
+                  <div class="w-10 h-10 hidden md:flex lg:hidden bg-muted rounded-lg items-center justify-center">
+                    <iconify-icon icon="lucide:clock" class="text-lg text-tertiary"></iconify-icon>
+                  </div>
+                  <iconify-icon icon="lucide:clock" class="md:hidden text-xl text-tertiary"></iconify-icon>
+                </div>
+                <p data-stat="upcomingMeta" class="text-[11px] md:text-xs text-muted-foreground mt-3 md:mt-5 lg:mt-3"></p>
+              </div>
+
+              <div class="bg-card border border-border rounded-xl p-4 md:p-5 lg:p-4">
+                <div class="w-9 h-9 bg-muted rounded-lg hidden lg:flex items-center justify-center">
+                  <iconify-icon icon="lucide:circle-check" class="text-lg text-tertiary"></iconify-icon>
+                </div>
+                <div class="flex items-start justify-between lg:block">
+                  <div>
+                    <p data-stat="attendedCount" class="font-mono text-3xl lg:mt-4"></p>
+                    <p class="text-xs md:text-sm lg:text-[13px] text-muted-foreground mt-2 md:mt-1 lg:mt-0">Events Attended</p>
+                  </div>
+                  <div class="w-10 h-10 hidden md:flex lg:hidden bg-muted rounded-lg items-center justify-center">
+                    <iconify-icon icon="lucide:circle-check" class="text-lg text-tertiary"></iconify-icon>
+                  </div>
+                  <iconify-icon icon="lucide:circle-check" class="md:hidden text-xl text-tertiary"></iconify-icon>
+                </div>
+                <p data-stat="attendedMeta" class="text-[11px] md:text-xs text-tertiary mt-3 md:mt-5 lg:mt-3"></p>
+              </div>
+
+              <div class="bg-card border border-border rounded-xl p-4 md:p-5 lg:p-4">
+                <div class="w-9 h-9 bg-muted rounded-lg hidden lg:flex items-center justify-center">
+                  <iconify-icon icon="lucide:award" class="text-lg text-tertiary"></iconify-icon>
+                </div>
+                <div class="flex items-start justify-between lg:block">
+                  <div>
+                    <p data-stat="certificatesCount" class="font-mono text-3xl lg:mt-4"></p>
+                    <p class="text-xs md:text-sm lg:text-[13px] text-muted-foreground mt-2 md:mt-1 lg:mt-0">Certificates</p>
+                  </div>
+                  <div class="w-10 h-10 hidden md:flex lg:hidden bg-muted rounded-lg items-center justify-center">
+                    <iconify-icon icon="lucide:award" class="text-lg text-tertiary"></iconify-icon>
+                  </div>
+                  <iconify-icon icon="lucide:award" class="md:hidden text-xl text-tertiary"></iconify-icon>
+                </div>
+                <p data-stat="certificatesMeta" class="text-[11px] md:text-xs text-primary mt-3 md:mt-5 lg:mt-3"></p>
+              </div>
+            </section>
+
+          </div>
         </main>
       </div>
     </div>
