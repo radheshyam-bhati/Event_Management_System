@@ -1,0 +1,52 @@
+[
+  {
+    "id": "gal-001",
+    "category": "Cultural",
+    "dateLabel": "12 FEB 2025",
+    "title": "Union Debate Night",
+    "meta": "Union Hall · 42 photos",
+    "heightClass": "h-56",
+    "imageAlt": "Students celebrating graduation outdoors",
+    "imageUrl": "https://uxmagic.blob.core.windows.net/public/agent-images/debate-hall-1790052361388-45ho0627cua.png"
+  },
+  {
+    "id": "gal-002",
+    "category": "Workshops",
+    "dateLabel": "18 MAR 2025",
+    "title": "Design Thinking Lab",
+    "meta": "Innovation Studio · 36 photos",
+    "heightClass": "h-72",
+    "imageAlt": "Students collaborating in a workshop",
+    "imageUrl": "https://uxmagic.blob.core.windows.net/public/agent-images/design-workshop-1790052346811-2sp8zgu2f7l.png"
+  },
+  {
+    "id": "gal-003",
+    "category": "Academic",
+    "dateLabel": "25 APR 2025",
+    "title": "The Power of Youth Voices",
+    "meta": "Main Auditorium · 58 photos",
+    "heightClass": "h-56",
+    "imageAlt": "Students attending an auditorium event",
+    "imageUrl": "https://uxmagic.blob.core.windows.net/public/agent-images/lecture-hall-1790052322471-i51r4qmub9.png"
+  },
+  {
+    "id": "gal-004",
+    "category": "Social",
+    "dateLabel": "03 MAY 2025",
+    "title": "Spring Social",
+    "meta": "North Lawn · 24 photos",
+    "heightClass": "h-64",
+    "imageAlt": "Crowd gathered for a campus social event",
+    "imageUrl": "https://uxmagic.blob.core.windows.net/public/agent-images/cultural-night-1790052334002-hiq0hojxni.png"
+  },
+  {
+    "id": "gal-005",
+    "category": "Sports",
+    "dateLabel": "09 MAY 2025",
+    "title": "Intercollege Finals",
+    "meta": "Sports Complex · 31 photos",
+    "heightClass": "h-56",
+    "imageAlt": "Students playing basketball",
+    "imageUrl": "https://uxmagic.blob.core.windows.net/public/agent-images/campus-volunteer-1790052373777-42y00aemk7b.png"
+  }
+]

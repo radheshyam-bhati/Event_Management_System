@@ -1,0 +1,10 @@
+[
+  {
+    "id": "u-stu-001",
+    "firstName": "Aarav",
+    "role": "Student",
+    "avatarUrl": "https://randomuser.me/api/portraits/men/32.jpg",
+    "termLabel": "Spring term · 2025",
+    "registeredThisMonth": 2
+  }
+]
