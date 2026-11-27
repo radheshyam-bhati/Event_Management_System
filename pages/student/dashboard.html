@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard — Obsidian Ledger</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+    <style type="text/tailwindcss" src="../../css/main.css"></style>
+    <link rel="stylesheet" href="../../css/main.css" />
+  </head>
+  <body>
+    <div class="min-h-screen w-full bg-background flex flex-col relative font-sans text-foreground pb-16 md:pb-0">
+      <div class="flex flex-1">
+        <!-- Desktop Sidebar -->
+        <aside class="hidden lg:flex w-[260px] bg-foreground text-muted-foreground p-6 flex-col">
+          <div class="flex items-center gap-3 pb-8 border-b border-secondary">
+            <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
+              <iconify-icon icon="lucide:book-open" class="text-xl text-tertiary"></iconify-icon>
+            </div>
+            <div>
+              <div class="font-heading text-xl text-card">Obsidian Ledger</div>
+              <div class="text-[9px] tracking-[0.18em] uppercase">College Events</div>
+            </div>
+          </div>
+          <nav class="mt-7 space-y-1">
+            <a class="min-h-11 px-3 -ml-3 flex items-center gap-3 bg-secondary text-card rounded-r-lg border-l-[3px] border-primary" href="dashboard.html">
+              <iconify-icon icon="lucide:layout-dashboard" class="text-lg text-primary"></iconify-icon>
+              <span class="text-sm font-semibold text-secondary-foreground">Dashboard</span>
+            </a>
+            <a class="min-h-11 px-3 flex items-center gap-3 hover:bg-secondary hover:text-card rounded-lg" href="events.html">
+              <iconify-icon icon="lucide:search" class="text-lg"></iconify-icon>
+              <span class="text-sm">Discover Events</span>
+            </a>
+            <a class="min-h-11 px-3 flex items-center gap-3 hover:bg-secondary hover:text-card rounded-lg" href="my-events.html">
+              <iconify-icon icon="lucide:calendar" class="text-lg"></iconify-icon>
+              <span class="text-sm">My Registrations</span>
+            </a>
+            <a class="min-h-11 px-3 flex items-center gap-3 hover:bg-secondary hover:text-card rounded-lg" href="attendance-history.html">
+              <iconify-icon icon="lucide:circle-check" class="text-lg"></iconify-icon>
+              <span class="text-sm">Attendance</span>
+            </a>
+            <a class="min-h-11 px-3 flex items-center gap-3 hover:bg-secondary hover:text-card rounded-lg" href="certificates.html">
+              <iconify-icon icon="lucide:award" class="text-lg"></iconify-icon>
+              <span class="text-sm">Certificates</span>
+            </a>
+            <a class="min-h-11 px-3 flex items-center gap-3 hover:bg-secondary hover:text-card rounded-lg" href="gallery.html">
+              <iconify-icon icon="lucide:image" class="text-lg"></iconify-icon>
+              <span class="text-sm">Gallery</span>
+            </a>
+          </nav>
+          <div class="mt-auto bg-secondary rounded-xl p-5 border border-tertiary relative overflow-hidden">
+            <iconify-icon icon="lucide:archway" class="absolute -right-4 -bottom-5 text-7xl text-tertiary"></iconify-icon>
+            <p class="font-heading italic text-lg text-secondary-foreground relative">Events build brighter futures.</p>
+            <p class="text-xs mt-3 relative text-secondary-foreground">Be a part of something bigger.</p>
+          </div>
+        </aside>
+
+        <main class="flex-1 min-w-0">
+          <header class="hidden md:flex h-16 bg-card border-b border-border px-7 lg:px-8 items-center justify-between">
+            <div class="w-[300px] lg:w-[380px] min-h-10 bg-background rounded-lg px-3 flex items-center gap-2 text-muted-foreground">
+              <iconify-icon icon="lucide:search" class="text-lg"></iconify-icon>
+              <span class="text-[13px]">Search events, departments, or keywords...</span>
+            </div>
+            <div class="flex items-center gap-3 lg:gap-5">
+              <a href="../shared/notifications.html" class="relative min-h-11 min-w-11 flex items-center justify-center">
+                <iconify-icon icon="lucide:bell" class="text-xl"></iconify-icon>
+                <span data-notification-dot class="hidden absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"></span>
+              </a>
+              <a href="../shared/profile.html" class="flex items-center gap-3">
+                <img data-user-avatar src="" alt="Student profile portrait" class="hidden lg:block w-9 h-9 rounded-full border border-border object-cover" />
+                <div class="text-right lg:text-left">
+                  <p data-user-name class="text-sm font-semibold"></p>
+                  <p data-user-role class="text-[11px] text-muted-foreground"></p>
+                </div>
+                <iconify-icon icon="lucide:chevron-down" class="hidden lg:inline-block text-base text-muted-foreground"></iconify-icon>
+              </a>
+            </div>
+          </header>
+          <div id="dashboard-main-content" class="px-5 py-6 md:p-7 lg:p-8 max-w-[900px] lg:max-w-[860px] mx-auto"></div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
