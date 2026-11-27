@@ -1,11 +1,12 @@
 (async function () {
   const { fetchData, esc } = window.AppData;
-  const [users, events, regs, att, certs] = await Promise.all([
+  const [users, events, regs, att, certs, notifs] = await Promise.all([
     fetchData("users"),
     fetchData("events"),
     fetchData("registrations"),
     fetchData("attendance"),
-    fetchData("certificates")
+    fetchData("certificates"),
+    fetchData("notifications")
   ]);
 
   const user = users[0];
@@ -53,4 +54,23 @@
         </div>
       </div>
     </div>`;
+
+  document.getElementById("recommended-grid").innerHTML = events.filter((e) => e.recommended).map((evt) => `
+    <article class="min-w-[260px] md:min-w-0 bg-card border border-border rounded-xl overflow-hidden">
+      <div class="h-36 md:h-auto md:aspect-[16/8] lg:aspect-[4/3] overflow-hidden"><img src="${esc(evt.imageUrl)}" alt="${esc(evt.imageAlt)}" class="w-full h-full object-cover hover:scale-105 transition" width="1536" height="1024"></div>
+      <div class="p-4">
+        <span class="text-[10px] uppercase font-bold tracking-wider text-tertiary">${esc(evt.category)}</span>
+        <h3 class="font-heading text-xl lg:text-lg mt-1 lg:mt-2 text-balance">${esc(evt.title)}</h3>
+        <p class="font-mono text-[10px] text-muted-foreground mt-2">${esc(evt.shortDate)} · ${esc(evt.shortVenue)} · ${evt.spotsLeft} SPOTS</p>
+        <a href="event-details.html?id=${esc(evt.id)}" class="w-full border border-tertiary text-tertiary min-h-11 rounded-lg text-sm font-semibold mt-4 inline-flex items-center justify-center">Register</a>
+      </div>
+    </article>`).join("");
+
+  document.querySelectorAll("[data-calendar-label]").forEach((el) => { el.textContent = "April 2025"; });
+  const calDays = ["M","T","W","T","F","S","S","","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"]
+    .map((d) => d === "12" ? `<span class="bg-accent rounded-full">12</span>` : d === "25" ? `<span class="bg-tertiary text-tertiary-foreground rounded-full">25</span>` : `<span>${d}</span>`).join("");
+  document.querySelectorAll("[data-calendar-grid]").forEach((el) => { el.innerHTML = calDays; });
+
+  const hasUnread = notifs.some((n) => !n.read);
+  document.querySelectorAll("[data-notification-dot]").forEach((el) => el.classList.toggle("hidden", !hasUnread));
 })();
