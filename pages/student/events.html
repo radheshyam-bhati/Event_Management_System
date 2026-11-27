@@ -50,9 +50,25 @@
               <button class="min-h-11 border border-border rounded-lg px-3 text-sm flex justify-between items-center">Soonest first <iconify-icon icon="lucide:arrow-down-up"></iconify-icon></button>
             </section>
 
+            <div class="flex items-center justify-between mt-8">
+              <h2 class="font-heading text-2xl">Open invitations</h2>
+              <span id="events-count-label" class="font-mono text-xs text-muted-foreground"></span>
+            </div>
+
+            <section id="events-grid" class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-4"></section>
+
+            <section class="mt-8 bg-muted border border-border rounded-xl p-6 flex items-center gap-5">
+              <div class="w-12 h-12 rounded-lg bg-card flex items-center justify-center"><iconify-icon icon="lucide:search-x" class="text-2xl text-tertiary"></iconify-icon></div>
+              <div class="flex-1"><h2 class="font-heading text-xl">No events match your filters</h2><p class="text-sm text-muted-foreground">Try another department, category, or date range.</p></div>
+              <button class="min-h-11 px-4 rounded-lg border border-tertiary text-tertiary text-sm font-semibold">Clear filters</button>
+            </section>
           </div>
         </main>
       </div>
     </div>
+
+    <script src="../../js/config.js"></script>
+    <script src="../../js/app.js"></script>
+    <script src="../../js/student/events.js"></script>
   </body>
 </html>
