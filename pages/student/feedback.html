@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Feedback — Obsidian Ledger</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+    <style type="text/tailwindcss" src="../../css/main.css"></style>
+    <link rel="stylesheet" href="../../css/main.css" />
+  </head>
+  <body>
+    <div class="min-h-screen w-full bg-background flex flex-col relative text-foreground font-sans">
+      <header class="h-16 shrink-0 bg-card border-b border-border flex items-center justify-between px-5 lg:px-8">
+        <div class="flex items-center gap-3">
+          <button type="button" class="lg:hidden min-h-11 min-w-11 flex items-center justify-center"><iconify-icon icon="lucide:menu" class="text-xl"></iconify-icon></button>
+          <div class="flex items-center gap-2">
+            <div class="h-8 w-8 bg-foreground text-primary flex items-center justify-center rounded-lg">
+              <iconify-icon icon="lucide:book-open" class="text-lg"></iconify-icon>
+            </div>
+            <div>
+              <p class="font-heading text-lg leading-none">Obsidian Ledger</p>
+              <p class="text-[9px] tracking-[0.16em] text-muted-foreground mt-1">COLLEGE EVENTS</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="../shared/notifications.html" class="min-h-11 min-w-11 flex items-center justify-center relative">
+            <iconify-icon icon="lucide:bell" class="text-xl"></iconify-icon>
+            <span data-notification-dot class="hidden absolute top-2 right-2 h-2 w-2 rounded-full bg-primary"></span>
+          </a>
+          <a href="../shared/profile.html" class="min-h-11 flex items-center gap-2">
+            <img data-user-avatar class="h-8 w-8 rounded-full border border-border object-cover" src="" alt="Student profile" />
+            <span data-user-name class="hidden sm:block text-sm font-semibold"></span>
+            <iconify-icon icon="lucide:chevron-down" class="hidden sm:block text-base text-muted-foreground"></iconify-icon>
+          </a>
+        </div>
+      </header>
+
+      <div class="flex flex-1">
+        <aside class="hidden lg:flex w-64 shrink-0 bg-foreground text-muted-foreground flex-col p-5">
+          <div class="space-y-1">
+            <a href="dashboard.html" class="min-h-11 px-3 flex items-center gap-3 text-sm"><iconify-icon icon="lucide:layout-dashboard" class="text-lg"></iconify-icon>Dashboard</a>
+            <a href="events.html" class="min-h-11 px-3 flex items-center gap-3 text-sm"><iconify-icon icon="lucide:compass" class="text-lg"></iconify-icon>Discover Events</a>
+            <a href="my-events.html" class="min-h-11 px-3 flex items-center gap-3 text-sm"><iconify-icon icon="lucide:calendar-days" class="text-lg"></iconify-icon>My Registrations</a>
+            <a href="attendance-history.html" class="min-h-11 px-3 flex items-center gap-3 text-sm"><iconify-icon icon="lucide:activity" class="text-lg"></iconify-icon>Attendance</a>
+            <a href="certificates.html" class="min-h-11 px-3 flex items-center gap-3 text-sm"><iconify-icon icon="lucide:award" class="text-lg"></iconify-icon>Certificates</a>
+            <a href="gallery.html" class="min-h-11 px-3 flex items-center gap-3 text-sm"><iconify-icon icon="lucide:image" class="text-lg"></iconify-icon>Gallery</a>
+          </div>
+          <div class="mt-auto bg-tertiary/30 border border-tertiary rounded-xl p-4">
+            <iconify-icon icon="lucide:quote" class="text-primary text-lg"></iconify-icon>
+            <p class="font-heading italic text-lg text-card mt-2">Events build brighter futures.</p>
+            <p class="text-xs leading-5 mt-2 text-tertiary-foreground">Be a part of something bigger.</p>
+          </div>
+        </aside>
+
+        <main class="flex-1 max-w-3xl mx-auto w-full px-5 sm:px-8 lg:px-12 py-10 pb-24">
+          <div class="max-w-2xl">
+            <a href="event-details.html" class="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-tertiary mb-7">
+              <iconify-icon icon="lucide:arrow-left" class="text-lg"></iconify-icon>Back to event
+            </a>
+            <div class="text-center mb-9">
+              <div class="h-14 w-14 mx-auto rounded-full bg-accent text-tertiary flex items-center justify-center mb-5">
+                <iconify-icon icon="lucide:message-circle" class="text-2xl"></iconify-icon>
+              </div>
+              <p class="text-xs font-semibold tracking-[0.14em] text-muted-foreground uppercase">Your voice matters</p>
+              <h1 id="feedback-headline" class="text-3xl sm:text-4xl font-heading font-bold text-balance mt-2"></h1>
+              <p class="text-sm sm:text-base text-muted-foreground leading-6 text-pretty mt-3">Your feedback helps us shape more meaningful campus experiences. It takes less than a minute.</p>
+            </div>
+
+            <section class="bg-card border border-border rounded-xl shadow-md p-5 sm:p-8">
+              <div class="border-b border-border pb-6">
+                <div class="flex items-center gap-3">
+                  <div class="h-11 w-11 rounded-lg bg-muted text-tertiary flex items-center justify-center">
+                    <iconify-icon icon="lucide:calendar-days" class="text-xl"></iconify-icon>
+                  </div>
+                  <div>
+                    <h2 id="feedback-event-title" class="font-heading text-xl font-semibold"></h2>
+                    <p id="feedback-event-meta" class="text-xs text-muted-foreground mt-1"></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="py-7">
+                <label class="block text-base font-semibold">Rate your experience <span class="text-destructive">*</span></label>
+                <p class="text-sm text-muted-foreground mt-1">Select one star to share your overall impression.</p>
+                <div id="rating-buttons" class="flex justify-between max-w-md mx-auto mt-7 gap-2" aria-label="Event rating">
+                  <button type="button" data-rating="1" data-label="Poor" class="min-h-11 min-w-11 flex flex-col items-center gap-1 text-muted-foreground"><iconify-icon icon="lucide:star" class="text-3xl"></iconify-icon><span class="text-[10px] font-medium">Poor</span></button>
+                  <button type="button" data-rating="2" data-label="Fair" class="min-h-11 min-w-11 flex flex-col items-center gap-1 text-muted-foreground"><iconify-icon icon="lucide:star" class="text-3xl"></iconify-icon><span class="text-[10px] font-medium">Fair</span></button>
+                  <button type="button" data-rating="3" data-label="Good" class="min-h-11 min-w-11 flex flex-col items-center gap-1 text-muted-foreground"><iconify-icon icon="lucide:star" class="text-3xl"></iconify-icon><span class="text-[10px] font-medium">Good</span></button>
+                  <button type="button" data-rating="4" data-label="Great" class="min-h-11 min-w-11 flex flex-col items-center gap-1 text-muted-foreground"><iconify-icon icon="lucide:star" class="text-3xl"></iconify-icon><span class="text-[10px] font-medium">Great</span></button>
+                  <button type="button" data-rating="5" data-label="Excellent" class="min-h-11 min-w-11 flex flex-col items-center gap-1 text-primary"><iconify-icon icon="lucide:star" class="text-3xl"></iconify-icon><span class="text-[10px] font-medium text-foreground">Excellent</span></button>
+                </div>
+                <p id="rating-caption" class="text-xs text-muted-foreground text-center mt-5">5 — Excellent</p>
+              </div>
+
+              <div class="border-t border-border pt-7">
+                <label class="block text-base font-semibold" for="feedback">Tell us more <span class="text-muted-foreground font-normal">(optional)</span></label>
+                <p class="text-sm text-muted-foreground mt-1">What did you like, or what could we improve?</p>
+                <textarea id="feedback" class="w-full mt-4 min-h-36 p-4 bg-background border border-input rounded-lg text-sm leading-6 focus:outline-none focus:ring-2 focus:ring-ring" placeholder="Tell us what you liked or what we could improve..."></textarea>
+                <div class="flex flex-col-reverse sm:flex-row sm:justify-between sm:items-center gap-3 mt-6">
+                  <p class="text-xs text-muted-foreground">Your response is shared with the event team.</p>
+                  <button type="button" class="min-h-11 px-5 rounded-lg bg-primary text-primary-foreground text-sm font-semibold flex items-center justify-center gap-2">
+                    <span>Submit feedback</span>
+                    <iconify-icon icon="lucide:arrow-right" class="text-base"></iconify-icon>
+                  </button>
+                </div>
+              </div>
+            </section>
+            <p class="text-center text-xs text-muted-foreground mt-6">Already submitted feedback? Thank you for helping your campus grow.</p>
+          </div>
+        </main>
+      </div>
+
+      <nav class="lg:hidden sticky bottom-0 left-0 right-0 bg-card border-t border-border flex justify-around px-2">
+        <a href="dashboard.html" class="min-h-14 min-w-11 flex flex-col items-center justify-center gap-1 text-muted-foreground"><iconify-icon icon="lucide:house" class="text-lg"></iconify-icon><span class="text-[10px]">Home</span></a>
+        <a href="events.html" class="min-h-14 min-w-11 flex flex-col items-center justify-center gap-1 text-muted-foreground"><iconify-icon icon="lucide:compass" class="text-lg"></iconify-icon><span class="text-[10px]">Events</span></a>
+        <a href="my-events.html" class="min-h-14 min-w-11 flex flex-col items-center justify-center gap-1 text-muted-foreground"><iconify-icon icon="lucide:calendar-days" class="text-lg"></iconify-icon><span class="text-[10px]">My Events</span></a>
+        <a href="attendance-history.html" class="min-h-14 min-w-11 flex flex-col items-center justify-center gap-1 text-muted-foreground"><iconify-icon icon="lucide:activity" class="text-lg"></iconify-icon><span class="text-[10px]">Attendance</span></a>
+        <a href="../shared/profile.html" class="min-h-14 min-w-11 flex flex-col items-center justify-center gap-1 text-muted-foreground"><iconify-icon icon="lucide:user" class="text-lg"></iconify-icon><span class="text-[10px]">Profile</span></a>
+      </nav>
+    </div>
+
+    <script src="../../js/config.js"></script>
+    <script src="../../js/app.js"></script>
+    <script src="../../js/student/feedback.js"></script>
+  </body>
+</html>
