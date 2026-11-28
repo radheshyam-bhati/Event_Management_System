@@ -1,0 +1,53 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--radius);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+}
+
+.badge-pill {
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+}
+
+.badge-mono {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+}
+
+.badge-accent {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.badge-accent-tertiary {
+  background-color: var(--accent);
+  color: var(--tertiary);
+}
+
+.badge-muted {
+  background-color: var(--muted);
+  color: var(--tertiary);
+}
+
+.badge-tertiary {
+  background-color: var(--tertiary);
+  color: var(--tertiary-foreground);
+}
+
+.badge-secondary {
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+}
+
+.status-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background-color: var(--tertiary);
+  display: inline-block;
+}
