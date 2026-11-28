@@ -6,13 +6,14 @@
   document.querySelectorAll("[data-user-name]").forEach((el) => { el.textContent = users[0].firstName; });
   document.querySelectorAll("[data-notification-dot]").forEach((el) => el.classList.toggle("hidden", !notifs.some((n) => !n.read)));
 
+  const sizeMap = { "h-56": "gallery-img--sm", "h-64": "gallery-img--md", "h-72": "gallery-img--lg" };
   document.getElementById("gallery-grid").innerHTML = items.map((item) => `
-    <div class="overflow-hidden rounded-xl border border-border bg-card shadow-md">
-      <img src="${esc(item.imageUrl)}" class="${esc(item.heightClass)} w-full object-cover" alt="${esc(item.imageAlt)}">
-      <div class="p-4">
-        <div class="flex items-center justify-between"><span class="rounded-lg bg-accent px-2 py-1 text-xs font-semibold text-accent-foreground">${esc(item.category)}</span><span class="font-mono text-[11px] text-muted-foreground">${esc(item.dateLabel)}</span></div>
-        <p class="mt-3 font-heading text-xl">${esc(item.title)}</p>
-        <p class="mt-1 text-sm text-muted-foreground">${esc(item.meta)}</p>
+    <div class="gallery-card">
+      <img src="${esc(item.imageUrl)}" class="gallery-img ${sizeMap[item.heightClass] || "gallery-img--sm"}" alt="${esc(item.imageAlt)}">
+      <div class="card-padded">
+        <div class="flex items-center justify-between"><span class="badge badge-accent">${esc(item.category)}</span><span class="eyebrow-mono">${esc(item.dateLabel)}</span></div>
+        <p class="section-title mt-3">${esc(item.title)}</p>
+        <p class="text-sm text-muted mt-1">${esc(item.meta)}</p>
       </div>
     </div>`).join("");
 })();
