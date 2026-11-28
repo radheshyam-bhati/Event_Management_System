@@ -4,41 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Attendance History — Obsidian Ledger</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
-    <style type="text/tailwindcss" src="../../css/main.css"></style>
     <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/pages/attendance.css" />
   </head>
   <body>
-    <div class="min-h-screen w-full bg-background flex flex-col relative text-foreground">
-      <header class="h-16 bg-card border-b border-border px-5 lg:px-8 flex justify-between items-center">
-        <a href="dashboard.html" class="font-heading text-xl">Obsidian Ledger</a>
+    <div class="app-shell">
+      <header class="topbar">
+        <a href="dashboard.html" class="section-title">Obsidian Ledger</a>
         <a href="my-events.html" class="text-sm font-semibold">My Registrations</a>
       </header>
 
-      <main class="max-w-5xl mx-auto w-full p-5 lg:p-8">
-        <p class="text-xs uppercase tracking-[0.18em] text-tertiary font-semibold">Participation record</p>
-        <h1 class="font-heading text-4xl mt-2">Attendance History</h1>
+      <main class="container-lg">
+        <p class="eyebrow">Participation record</p>
+        <h1 class="page-title">Attendance History</h1>
 
-        <section class="grid grid-cols-1 sm:grid-cols-3 gap-5 mt-7">
-          <div class="bg-card rounded-xl p-5 border border-border">
-            <p id="att-attended" class="font-mono text-3xl"></p>
-            <p class="text-sm text-muted-foreground mt-2">Events Attended</p>
-          </div>
-          <div class="bg-card rounded-xl p-5 border border-border">
-            <p id="att-noshows" class="font-mono text-3xl"></p>
-            <p class="text-sm text-muted-foreground mt-2">No-shows</p>
-          </div>
-          <div class="bg-card rounded-xl p-5 border border-border">
-            <p id="att-rate" class="font-mono text-3xl"></p>
-            <p class="text-sm text-muted-foreground mt-2">Attendance Rate</p>
-          </div>
+        <section class="att-stats-grid">
+          <div class="card card-padded"><p id="att-attended" class="kpi-value"></p><p class="text-sm text-muted mt-2">Events Attended</p></div>
+          <div class="card card-padded"><p id="att-noshows" class="kpi-value"></p><p class="text-sm text-muted mt-2">No-shows</p></div>
+          <div class="card card-padded"><p id="att-rate" class="kpi-value"></p><p class="text-sm text-muted mt-2">Attendance Rate</p></div>
         </section>
 
-        <section class="bg-card border border-border rounded-xl overflow-hidden mt-7">
-          <div class="grid grid-cols-4 px-5 py-4 bg-muted text-[10px] font-mono tracking-wider text-muted-foreground">
-            <span>EVENT</span><span>DATE</span><span>CATEGORY</span><span>STATUS</span>
-          </div>
+        <section class="table-card">
+          <div class="att-table-head"><span>EVENT</span><span>DATE</span><span>CATEGORY</span><span>STATUS</span></div>
           <div id="attendance-rows"></div>
         </section>
       </main>
