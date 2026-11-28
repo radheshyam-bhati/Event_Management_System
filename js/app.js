@@ -1,13 +1,6 @@
-// Shared Tailwind CSS loader and data fetcher (switch USE_MOCK in js/config.js for backend)
+// Shared data fetcher and HTML escape helper (switch USE_MOCK in js/config.js for backend)
 (function (global) {
   "use strict";
-
-  document.querySelectorAll('style[type="text/tailwindcss"][src]').forEach(async (tag) => {
-    const src = tag.getAttribute("src");
-    if (!src || tag.textContent.trim()) return;
-    const res = await fetch(src);
-    if (res.ok) tag.textContent = await res.text();
-  });
 
   async function fetchData(key) {
     const cfg = global.EMS_CONFIG;

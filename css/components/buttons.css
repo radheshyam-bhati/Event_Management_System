@@ -1,0 +1,98 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0 1rem;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: opacity 150ms ease, transform 120ms ease, background-color 150ms ease;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.btn-tertiary {
+  background-color: var(--tertiary);
+  color: var(--tertiary-foreground);
+}
+
+.btn-outline {
+  border: 1px solid var(--border);
+  background-color: var(--card);
+  color: var(--card-foreground);
+}
+
+.btn-outline-transparent {
+  border: 1px solid var(--border);
+  background-color: transparent;
+  color: var(--foreground);
+}
+
+.btn-outline-tertiary {
+  border: 1px solid var(--tertiary);
+  background-color: transparent;
+  color: var(--tertiary);
+}
+
+.btn-outline-danger {
+  border: 1px solid var(--destructive);
+  background-color: transparent;
+  color: var(--destructive);
+}
+
+.btn-danger {
+  background-color: var(--destructive);
+  color: var(--destructive-foreground);
+}
+
+.btn-danger-ghost {
+  color: var(--destructive);
+  padding: 0 0.75rem;
+  font-size: 0.75rem;
+}
+
+.btn-sm {
+  min-height: 2.75rem;
+  padding: 0 0.75rem;
+  font-size: 0.75rem;
+}
+
+.btn-lg {
+  padding: 0 1.25rem;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.btn-bold {
+  font-weight: 700;
+}
+
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--tertiary);
+}
+
+.btn-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  min-width: 2.75rem;
+  border-radius: var(--radius);
+}
+
+.btn-icon-bordered {
+  border: 1px solid var(--border);
+}
