@@ -11,12 +11,12 @@
   document.getElementById("cert-records-badge").textContent = certs.summary.badge;
 
   document.getElementById("certificates-list").innerHTML = certs.items.map((c) => {
-    const cls = c.primary ? "min-h-11 rounded-lg bg-primary px-4 text-sm font-semibold text-primary-foreground" : "min-h-11 rounded-lg border border-tertiary px-4 text-sm font-semibold text-tertiary";
+    const cls = c.primary ? "btn btn-primary" : "btn btn-outline-tertiary";
     return `
-      <div class="flex flex-col gap-4 p-5 sm:flex-row sm:items-center">
-        <div class="flex h-16 w-12 shrink-0 items-center justify-center rounded-lg border border-primary bg-accent text-tertiary"><iconify-icon icon="lucide:file" class="text-2xl"></iconify-icon></div>
-        <div class="min-w-0 flex-1"><p class="font-heading text-xl">${esc(c.title)}</p><p class="mt-1 text-sm text-muted-foreground">${esc(c.meta)}</p><p class="mt-2 font-mono text-[11px] tracking-wide text-tertiary">${esc(c.code)}</p></div>
-        <button class="${cls}"><iconify-icon icon="lucide:download" class="mr-2 text-lg"></iconify-icon>Download Certificate</button>
+      <div class="cert-row">
+        <div class="cert-thumb"><iconify-icon icon="lucide:file"></iconify-icon></div>
+        <div class="flex-1"><p class="section-title">${esc(c.title)}</p><p class="text-sm text-muted mt-1">${esc(c.meta)}</p><p class="mt-2 font-mono text-xs text-tertiary">${esc(c.code)}</p></div>
+        <button type="button" class="${cls}"><iconify-icon icon="lucide:download"></iconify-icon>Download Certificate</button>
       </div>`;
   }).join("");
 })();
