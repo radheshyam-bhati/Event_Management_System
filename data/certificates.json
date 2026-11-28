@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "earned": "04",
+    "earnedShort": 4,
+    "earnedMeta": "Keep participating!",
+    "attended": 12,
+    "year": "2025",
+    "badge": "04 RECORDS"
+  },
+  "items": [
+    {
+      "title": "The Power of Youth Voices",
+      "meta": "Seminar · 25 Apr 2025 · Main Auditorium",
+      "code": "CERT-2025-0417",
+      "primary": true
+    },
+    {
+      "title": "Design Thinking Lab",
+      "meta": "Workshop · 18 Mar 2025 · Innovation Studio",
+      "code": "CERT-2025-0302",
+      "primary": false
+    },
+    {
+      "title": "Union Debate Night",
+      "meta": "Cultural · 12 Feb 2025 · Union Hall",
+      "code": "CERT-2025-0212",
+      "primary": false
+    }
+  ]
+}
