@@ -4,28 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Event Details — Obsidian Ledger</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
-    <style type="text/tailwindcss" src="../../css/main.css"></style>
     <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/pages/events.css" />
   </head>
   <body>
-    <div class="min-h-screen w-full bg-background flex flex-col relative text-foreground">
-      <header class="h-16 bg-card border-b border-border px-5 lg:px-8 flex items-center justify-between">
-        <a href="events.html" class="min-h-11 flex items-center gap-2 text-sm font-semibold">
-          <iconify-icon icon="lucide:arrow-left"></iconify-icon>Discover Events
-        </a>
-        <div class="flex gap-4 items-center">
-          <a href="../shared/notifications.html" class="min-w-11 min-h-11 flex items-center justify-center">
-            <iconify-icon icon="lucide:bell" class="text-xl"></iconify-icon>
-          </a>
-          <a href="../shared/profile.html">
-            <img data-user-avatar class="w-9 h-9 rounded-full object-cover" alt="Student profile portrait" src="" />
-          </a>
+    <div class="app-shell">
+      <header class="topbar">
+        <a href="events.html" class="btn-link"><iconify-icon icon="lucide:arrow-left"></iconify-icon>Discover Events</a>
+        <div class="topbar-actions">
+          <a href="../shared/notifications.html" class="btn-icon"><iconify-icon icon="lucide:bell"></iconify-icon></a>
+          <a href="../shared/profile.html"><img data-user-avatar class="avatar" alt="Student profile portrait" src="" /></a>
         </div>
       </header>
 
-      <main id="event-detail-main" class="max-w-6xl mx-auto p-5 lg:p-8 w-full"></main>
+      <main id="event-detail-main" class="container-xl"></main>
     </div>
 
     <script src="../../js/config.js"></script>
