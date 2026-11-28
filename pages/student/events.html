@@ -4,63 +4,65 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Discover Events — Obsidian Ledger</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
-    <style type="text/tailwindcss" src="../../css/main.css"></style>
     <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/pages/events.css" />
   </head>
   <body>
-    <div class="min-h-screen w-full bg-background flex flex-col relative text-foreground">
-      <div class="flex flex-1">
-        <aside class="hidden lg:flex w-64 bg-foreground text-muted-foreground p-6 flex-col">
-          <div class="flex gap-3 items-center pb-7 border-b border-secondary">
-            <div class="w-10 h-10 rounded-lg bg-accent flex items-center justify-center"><iconify-icon icon="lucide:book-open" class="text-xl text-tertiary"></iconify-icon></div>
-            <div><p class="font-heading text-xl text-card">Obsidian Ledger</p><p class="text-[9px] uppercase tracking-[0.18em]">College Events</p></div>
+    <div class="app-shell">
+      <div class="app-body">
+        <aside class="sidebar">
+          <div class="sidebar-brand">
+            <div class="sidebar-brand-icon"><iconify-icon icon="lucide:book-open" class="text-tertiary"></iconify-icon></div>
+            <div><p class="sidebar-brand-title">Obsidian Ledger</p><p class="sidebar-brand-sub">College Events</p></div>
           </div>
-          <nav class="mt-7 space-y-1">
-            <a href="dashboard.html" class="min-h-11 flex gap-3 items-center px-3 rounded-lg hover:bg-secondary"><iconify-icon icon="lucide:layout-dashboard"></iconify-icon>Dashboard</a>
-            <a href="events.html" class="min-h-11 flex gap-3 items-center px-3 rounded-lg bg-secondary text-secondary-foreground border-l-[3px] border-primary"><iconify-icon icon="lucide:search" class="text-primary"></iconify-icon>Discover Events</a>
-            <a href="my-events.html" class="min-h-11 flex gap-3 items-center px-3 rounded-lg"><iconify-icon icon="lucide:calendar"></iconify-icon>My Registrations</a>
-            <a href="attendance-history.html" class="min-h-11 flex gap-3 items-center px-3 rounded-lg"><iconify-icon icon="lucide:activity"></iconify-icon>Attendance</a>
-            <a href="certificates.html" class="min-h-11 flex gap-3 items-center px-3 rounded-lg"><iconify-icon icon="lucide:award"></iconify-icon>Certificates</a>
-            <a href="gallery.html" class="min-h-11 flex gap-3 items-center px-3 rounded-lg"><iconify-icon icon="lucide:image"></iconify-icon>Gallery</a>
+          <nav class="sidebar-nav">
+            <a href="dashboard.html" class="sidebar-link"><iconify-icon icon="lucide:layout-dashboard"></iconify-icon>Dashboard</a>
+            <a href="events.html" class="sidebar-link sidebar-link--active"><iconify-icon icon="lucide:search"></iconify-icon>Discover Events</a>
+            <a href="my-events.html" class="sidebar-link"><iconify-icon icon="lucide:calendar"></iconify-icon>My Registrations</a>
+            <a href="attendance-history.html" class="sidebar-link"><iconify-icon icon="lucide:activity"></iconify-icon>Attendance</a>
+            <a href="certificates.html" class="sidebar-link"><iconify-icon icon="lucide:award"></iconify-icon>Certificates</a>
+            <a href="gallery.html" class="sidebar-link"><iconify-icon icon="lucide:image"></iconify-icon>Gallery</a>
           </nav>
-          <div class="mt-auto rounded-xl p-5 bg-secondary border border-tertiary"><p class="font-heading italic text-lg text-secondary-foreground">Events build brighter futures.</p><p class="mt-2 text-xs text-secondary-foreground">Be a part of something bigger.</p></div>
+          <div class="sidebar-quote">
+            <p class="sidebar-quote-title">Events build brighter futures.</p>
+            <p class="sidebar-quote-sub">Be a part of something bigger.</p>
+          </div>
         </aside>
 
-        <main class="flex-1">
-          <header class="h-16 bg-card border-b border-border px-8 flex justify-between items-center">
-            <div class="min-h-10 w-96 bg-background rounded-lg flex items-center gap-2 px-3 text-sm text-muted-foreground"><iconify-icon icon="lucide:search"></iconify-icon>Search events, departments, or keywords...</div>
-            <div class="flex gap-4 items-center">
-              <a href="../shared/notifications.html" class="min-w-11 min-h-11 relative flex items-center justify-center"><iconify-icon icon="lucide:bell" class="text-xl"></iconify-icon><span data-notification-dot class="hidden absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"></span></a>
-              <a href="../shared/profile.html"><img data-user-avatar class="w-9 h-9 object-cover rounded-full border border-border" alt="Student profile portrait" src="" /></a>
+        <main class="main-area">
+          <header class="topbar">
+            <div class="topbar-search"><iconify-icon icon="lucide:search"></iconify-icon>Search events, departments, or keywords...</div>
+            <div class="topbar-actions">
+              <a href="../shared/notifications.html" class="btn-icon"><iconify-icon icon="lucide:bell"></iconify-icon><span data-notification-dot class="notif-dot hidden"></span></a>
+              <a href="../shared/profile.html"><img data-user-avatar class="avatar" alt="Student profile portrait" src="" /></a>
             </div>
           </header>
 
-          <div class="max-w-6xl mx-auto p-8">
-            <p class="text-xs tracking-[0.18em] uppercase text-tertiary font-semibold">Campus programme · Spring 2025</p>
-            <h1 class="font-heading text-4xl mt-2 text-balance">Discover Events</h1>
-            <p class="text-muted-foreground mt-3 max-w-2xl text-pretty">Find something happening on campus. Explore, participate, and make the most of your college experience.</p>
+          <div class="container-xl">
+            <p class="eyebrow">Campus programme · Spring 2025</p>
+            <h1 class="page-title">Discover Events</h1>
+            <p class="page-subtitle">Find something happening on campus. Explore, participate, and make the most of your college experience.</p>
 
-            <section class="mt-8 bg-card border border-border rounded-xl p-4 grid grid-cols-1 md:grid-cols-6 gap-3">
-              <div class="md:col-span-2 min-h-11 bg-background rounded-lg px-3 flex items-center gap-2 text-sm text-muted-foreground"><iconify-icon icon="lucide:search"></iconify-icon>Search events, departments, or keywords...</div>
-              <button class="min-h-11 border border-border rounded-lg px-3 text-sm flex justify-between items-center">Category <iconify-icon icon="lucide:chevron-down"></iconify-icon></button>
-              <button class="min-h-11 border border-border rounded-lg px-3 text-sm flex justify-between items-center">Department <iconify-icon icon="lucide:chevron-down"></iconify-icon></button>
-              <button class="min-h-11 border border-border rounded-lg px-3 text-sm flex justify-between items-center">Date <iconify-icon icon="lucide:chevron-down"></iconify-icon></button>
-              <button class="min-h-11 border border-border rounded-lg px-3 text-sm flex justify-between items-center">Soonest first <iconify-icon icon="lucide:arrow-down-up"></iconify-icon></button>
+            <section class="filter-bar">
+              <div class="filter-search"><iconify-icon icon="lucide:search"></iconify-icon>Search events, departments, or keywords...</div>
+              <button type="button" class="filter-select-btn">Category <iconify-icon icon="lucide:chevron-down"></iconify-icon></button>
+              <button type="button" class="filter-select-btn">Department <iconify-icon icon="lucide:chevron-down"></iconify-icon></button>
+              <button type="button" class="filter-select-btn">Date <iconify-icon icon="lucide:chevron-down"></iconify-icon></button>
+              <button type="button" class="filter-select-btn">Soonest first <iconify-icon icon="lucide:arrow-down-up"></iconify-icon></button>
             </section>
 
             <div class="flex items-center justify-between mt-8">
-              <h2 class="font-heading text-2xl">Open invitations</h2>
-              <span id="events-count-label" class="font-mono text-xs text-muted-foreground"></span>
+              <h2 class="section-title">Open invitations</h2>
+              <span id="events-count-label" class="eyebrow-mono"></span>
             </div>
 
-            <section id="events-grid" class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-4"></section>
+            <section id="events-grid" class="events-grid"></section>
 
-            <section class="mt-8 bg-muted border border-border rounded-xl p-6 flex items-center gap-5">
-              <div class="w-12 h-12 rounded-lg bg-card flex items-center justify-center"><iconify-icon icon="lucide:search-x" class="text-2xl text-tertiary"></iconify-icon></div>
-              <div class="flex-1"><h2 class="font-heading text-xl">No events match your filters</h2><p class="text-sm text-muted-foreground">Try another department, category, or date range.</p></div>
-              <button class="min-h-11 px-4 rounded-lg border border-tertiary text-tertiary text-sm font-semibold">Clear filters</button>
+            <section class="empty-filter-box">
+              <div class="empty-filter-icon"><iconify-icon icon="lucide:search-x"></iconify-icon></div>
+              <div class="flex-1"><h2 class="section-title">No events match your filters</h2><p class="text-sm text-muted">Try another department, category, or date range.</p></div>
+              <button type="button" class="btn btn-outline-tertiary">Clear filters</button>
             </section>
           </div>
         </main>
